@@ -1,0 +1,26 @@
+From In [1] 
+# Combine the data into a single dataset.  
+school_data_complete = pd.merge(student_data, school_data, how="left", on=["school_name", "school_name"])
+
+From in the middle at the top...
+District Summary
+Calculate the total number of schools
+
+Calculate the total number of students
+
+Calculate the total budget
+
+Calculate the average math score
+
+Calculate the average reading score
+
+Calculate the percentage of students with a passing math score (70 or greater)
+
+Calculate the percentage of students with a passing reading score (70 or greater)
+
+Calculate the percentage of students who passed math and reading (% Overall Passing)
+
+Create a dataframe to hold the above results
+
+Optional: give the displayed data cleaner formatting
+

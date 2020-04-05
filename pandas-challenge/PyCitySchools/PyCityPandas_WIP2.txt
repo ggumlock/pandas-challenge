@@ -1,0 +1,19 @@
+# Create a table that lists the average Reading Score for students of each grade level
+#(9th, 10th, 11th, 12th) at each school.
+
+nine = pyacademy_df[(pyacademy_df["grade"] == "9th")]
+ten = pyacademy_df[(pyacademy_df["grade"] == "10th")]
+eleven = pyacademy_df[(pyacademy_df["grade"] == "11th")]
+twelve = pyacademy_df[(pyacademy_df["grade"] == "12th")]
+
+nineRscore = ninth.groupby("school")["reading_score"].mean()
+tenRscore = tenth.groupby("school")["reading_score"].mean()
+elevenRscore = eleventh.groupby("school")["reading_score"].mean()
+twelveRscore = twelfth.groupby("school")["reading_score"].mean()
+
+readingscore=pd.DataFrame({
+    "9th":nineRscore,
+    "10th":tenRscore,
+    "11th":elevenRscore,
+    "12th":twelveRscore})
+readingscore

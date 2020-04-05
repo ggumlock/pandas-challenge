@@ -1,0 +1,20 @@
+# Create a table that lists the average Math Score for students of each grade level
+#(9th, 10th, 11th, 12th) at each school.
+
+ninth = pycityschool_df[(pycityschool_df["grade"] == "9th")]
+tenth = pycityschool_df[(pycityschool_df["grade"] == "10th")]
+eleventh = pycityschool_df[(pycityschool_df["grade"] == "11th")]
+twelfth = pycityschool_df[(pycityschool_df["grade"] == "12th")]
+
+ninthscore = ninth.groupby("school")["math_score"].mean()
+tenthscore = tenth.groupby("school")["math_score"].mean()
+eleventhscore = eleventh.groupby("school")["math_score"].mean()
+twelfthscore = twelfth.groupby("school")["math_score"].mean()
+
+mathscores=pd.DataFrame({
+    "9th":ninthscore,
+    "10th":tenthscore,
+    "11th":eleventhscore,
+    "12th":twelfthscore
+})
+mathscores
